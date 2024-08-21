@@ -56,9 +56,9 @@ const atividade5 = () => {
 
   setTimeout(() => {
     const removeAnimals = setInterval(() => {
-      animais.pop();
+      animais.splice(0, 1);
       console.log(animais);
       if (animais.length == 0) clearInterval(removeAnimals);
-    }, 600);
+    }, 2000);
   }, 3500);
 };
