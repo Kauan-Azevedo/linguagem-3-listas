@@ -62,5 +62,3 @@ const atividade5 = () => {
     }, 600);
   }, 3500);
 };
-
-atividade5();
