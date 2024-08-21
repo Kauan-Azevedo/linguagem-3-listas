@@ -37,3 +37,30 @@ const atividade4 = () => {
   console.log(array);
 };
 
+const atividade5 = () => {
+  let animais = [];
+  const addAnimals = setInterval(() => {
+    if (animais.length == 0) {
+      animais.push("Gato");
+      console.log(animais);
+    } else if (animais.length == 1) {
+      animais.push("Cachorro");
+      console.log(animais);
+    } else if (animais.length == 2) {
+      animais.push("Papagaio");
+      console.log(animais);
+    } else {
+      clearInterval(addAnimals);
+    }
+  }, 1000);
+
+  setTimeout(() => {
+    const removeAnimals = setInterval(() => {
+      animais.pop();
+      console.log(animais);
+      if (animais.length == 0) clearInterval(removeAnimals);
+    }, 600);
+  }, 3500);
+};
+
+atividade5();
